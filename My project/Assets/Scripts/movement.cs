@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-
-    public CharacterController2D controller;
     public LayerMask jumpableGround;
+    public string inputNameHorizontal;
+    public string jumpKey;
+
 
     public float runSpeed = 2f;
-    
-    float x;
-    bool jump = false;
+    public int jumpForce;
 
+    float x;
+
+    // Shortcuts
     private Rigidbody2D rb;
     private BoxCollider2D coll;
     private Animator anim;
@@ -32,31 +34,35 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update() {
 
-        x = Input.GetAxisRaw("Horizontal")* runSpeed;
+        x = Input.GetAxisRaw(inputNameHorizontal)* runSpeed;
+        float y = rb.velocity.y;
+        rb.velocity = new Vector2(x, y);
 
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w"))
+        if (Input.GetKeyDown(jumpKey) && isGrounded())
         {
-            jump = true;
+            rb.velocity = new Vector2(0, jumpForce);
         }
+
         UpdateAnimationState();
         
     
     
     }
-    void FixedUpdate()
-    {
-        controller.Move(x * Time.fixedDeltaTime, false, jump);
-        jump = false;
-    }
+    
 
     private void UpdateAnimationState()
     {
         MovementState state;
-        if (x != 0f)
+        if (x < 0f)
         {
             state = MovementState.running;
+            sprite.flipX = false;
         }
-        
+        else if (x > 0f)
+        {
+            state = MovementState.running;
+            sprite.flipX = true;
+        }
         else state = MovementState.idle;
 
         if (!isGrounded())
