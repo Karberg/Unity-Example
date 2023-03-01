@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 550638348}
   - component: {fileID: 550638354}
   m_Layer: 7
-  m_Name: Spiller
+  m_Name: Spiller 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,6 +391,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 550638348}
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 8
   runSpeed: 40
 --- !u!61 &550638350
 BoxCollider2D:
