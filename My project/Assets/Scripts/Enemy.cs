@@ -38,7 +38,10 @@ public class Enemy : MonoBehaviour
         // Disable Script
 
         this.enabled = false;
-        GetComponent<Collider2D>().enabled = false;
-
+        GetComponent<movement>().enabled = false;
+        GetComponent<PlayerCombat>().enabled = false;
+        //GetComponent<Collider2D>().enabled = false;
+        
+        
     }
 }

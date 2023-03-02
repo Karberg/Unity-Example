@@ -32,6 +32,8 @@ public class movement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+
+        Physics2D.IgnoreLayerCollision(7, 8);
     }
 
     // Update is called once per frame

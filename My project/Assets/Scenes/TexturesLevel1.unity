@@ -300,8 +300,8 @@ MonoBehaviour:
   inputNameHorizontal: Horizontal 1
   jumpKey: w
   attackPoint: {fileID: 2146499768}
-  runSpeed: 20
-  jumpForce: 20
+  runSpeed: 10
+  jumpForce: 15
 --- !u!61 &550638350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550638347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44, y: -5.32, z: 3.6781044}
+  m_LocalPosition: {x: -1.12, y: -5.32, z: 3.6781044}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -453,13 +453,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 550638354}
   attackPoint: {fileID: 2146499768}
-  attackRange: 0.65
+  attackRange: 0.93
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
-  attackDamge: 10
-  attackRate: 0.72
+  attackDamage: 20
+  attackRate: 1.05
   attackKey: x
+  DamageDelay: 0.5
 --- !u!114 &550638356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,9 +1026,10 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
-  attackDamge: 10
-  attackRate: 0.9
+  attackDamage: 20
+  attackRate: 1.05
   attackKey: y
+  DamageDelay: 0.5
 --- !u!95 &1591764072
 Animator:
   serializedVersion: 5
@@ -1066,8 +1068,8 @@ MonoBehaviour:
   inputNameHorizontal: Horizontal 2
   jumpKey: i
   attackPoint: {fileID: 95587574}
-  runSpeed: 20
-  jumpForce: 20
+  runSpeed: 10
+  jumpForce: 15
 --- !u!61 &1591764074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1199,7 +1201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1591764072}
   maxHealth: 100
-  animationRate: 2
+  animationRate: 0.14
 --- !u!1 &1648979425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,8 +1510,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146499767}
   m_LocalRotation: {x: -0, y: -0.31117457, z: -0, w: 0.9503528}
-  m_LocalPosition: {x: -0.33, y: 0.773, z: -0.2}
-  m_LocalScale: {x: 0.51, y: 1, z: 1}
+  m_LocalPosition: {x: -0.13, y: 0.773, z: 0.1}
+  m_LocalScale: {x: 0.78, y: 1.5294118, z: 1.5294118}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 550638353}
