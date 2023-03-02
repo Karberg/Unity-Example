@@ -254,8 +254,11 @@ MonoBehaviour:
   targets:
   - {fileID: 550638353}
   - {fileID: 1591764077}
-  offset: {x: 0, y: 6.27, z: -12.41}
-  smoothTime: 1
+  offset: {x: 0, y: 2, z: -12.41}
+  smoothTime: 0.5
+  minZoom: 17
+  maxZoom: 6
+  zoomLimiter: 50
 --- !u!1 &550638347
 GameObject:
   m_ObjectHideFlags: 0
