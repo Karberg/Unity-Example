@@ -14,6 +14,7 @@ public class PlayerCombat : MonoBehaviour
 
     public float attackRate = 2f;
     float nextAttackTime = 0f;
+    public string attackKey; 
 
 
 
@@ -22,10 +23,11 @@ public class PlayerCombat : MonoBehaviour
     {
         if(Time.time >= nextAttackTime)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(attackKey))
         {
-            Attack();
             nextAttackTime = Time.time + 1f / attackRate;
+            Attack();
+            
         }
         }
     }
