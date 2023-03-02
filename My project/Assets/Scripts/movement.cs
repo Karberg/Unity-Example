@@ -7,11 +7,14 @@ public class movement : MonoBehaviour
     public LayerMask jumpableGround;
     public string inputNameHorizontal;
     public string jumpKey;
+    public Transform attackPoint;
 
 
     public float runSpeed = 2f;
     public int jumpForce;
 
+    private float attackPointHeight = 0.773f;
+    private float attackPointHorizontal = 0.33f;
     float x;
 
     // Shortcuts
@@ -57,11 +60,14 @@ public class movement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
+            attackPoint.localPosition = new Vector2(-attackPointHorizontal, attackPointHeight);
+            
         }
         else if (x > 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
+            attackPoint.localPosition = new Vector2(attackPointHorizontal, attackPointHeight);
         }
         else state = MovementState.idle;
 
