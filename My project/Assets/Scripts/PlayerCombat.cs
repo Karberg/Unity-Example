@@ -44,6 +44,7 @@ public class PlayerCombat : MonoBehaviour
         //damge them
         foreach(Collider2D enemy in hitEnemies)
         {
+            nextAttackTime = Time.time + 1f / attackRate;
             enemy.GetComponent<Enemy>().TakeDamage(attackDamge);
         }
     }
