@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PLAYER LEARNING.unity
     guid: 9eab172cb9ff28a4b9f5751c08271de5
+  - enabled: 1
+    path: Assets/Scenes/NewWorld.unity
+    guid: d7880a4b713192f49b4bbc145720a4fc
   m_configObjects: {}
